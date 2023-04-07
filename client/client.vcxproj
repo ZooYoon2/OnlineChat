@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,14 +140,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="TextChat.cpp" />
-    <ClCompile Include="view.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\TextChat.cpp" />
+    <ClCompile Include="src\view.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SCH.h" />
-    <ClInclude Include="TextChat.h" />
-    <ClInclude Include="view.h" />
+    <ClInclude Include="include\SCH.h" />
+    <ClInclude Include="include\TextChat.h" />
+    <ClInclude Include="include\view.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

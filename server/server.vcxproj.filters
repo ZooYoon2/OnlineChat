@@ -15,24 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="TextChat.cpp">
+    <ClCompile Include="src\TextChat.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="channel.cpp">
+    <ClCompile Include="src\channel.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SCH.h">
+    <ClInclude Include="include\SCH.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="channel.h">
+    <ClInclude Include="include\channel.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="TextChat.h">
+    <ClInclude Include="include\TextChat.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
