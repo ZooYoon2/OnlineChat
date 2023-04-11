@@ -5,12 +5,15 @@
 #define _WINSOCKAPI_
 #pragma comment(lib, "Ws2_32.lib")
 
-#include <stdio.h>
-#include <string.h>
-#include <memory.h>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
 #include <thread>
 #include <mutex>
 #include <queue>
+
+#include "json.hpp"
+using json = nlohmann::json;
 
 #define PORTNO 3000
 #define IPADDRESS "127.0.0.1"

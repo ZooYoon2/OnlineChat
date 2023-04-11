@@ -1,5 +1,6 @@
 #include "TextChat.h"
-SOCKET mSocket;
+
+SOCKET tSocket;
 
 void recv_server() {
 	while (1) {
@@ -7,7 +8,7 @@ void recv_server() {
 		int SendSize;
 		char buffer[BUFFER_SIZE];
 
-		RecvSize = recv(mSocket, buffer, BUFFER_SIZE, 0);
+		RecvSize = recv(tSocket, buffer, BUFFER_SIZE, 0);
 		if (RecvSize <= 0) {
 			server_close();
 		}
@@ -16,7 +17,6 @@ void recv_server() {
 		buffer[RecvSize] = '\0';
 		printf("%s\n", buffer);
 	}
-
 }
 char* getString() {
 	char msg[BUFFER_SIZE];
@@ -41,7 +41,7 @@ char* getString() {
 }
 void testChat_init() {
 	//주소체계, SOCK_STREAM 연결형, SOCK_DGRAM 비연결형
-	mSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	tSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	//mSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
 	SOCKADDR_IN serv_addr;
@@ -49,11 +49,11 @@ void testChat_init() {
 	serv_addr.sin_addr.S_un.S_addr = inet_addr(IPADDRESS);
 	serv_addr.sin_port = htons(PORTNO);
 
-	if (mSocket == INVALID_SOCKET) {
+	if (tSocket == INVALID_SOCKET) {
 		printf("소켓 에러번호 : %d", WSAGetLastError());
 		WSACleanup();
 	}
-	if (connect(mSocket, (LPSOCKADDR)&serv_addr, sizeof(serv_addr)) == SOCKET_ERROR) {
+	if (connect(tSocket, (LPSOCKADDR)&serv_addr, sizeof(serv_addr)) == SOCKET_ERROR) {
 		printf("접속 실패");
 		WSACleanup();
 		return;
@@ -63,8 +63,6 @@ void testChat_init() {
 		std::thread th(recv_server);
 		th.detach();
 	}
-
-	
 }
 void send_msg() {
 	char msg[BUFFER_SIZE];
@@ -74,12 +72,12 @@ void send_msg() {
 		printf("메세지입력(q입력시 종료) : ");
 		data = getString();
 		if (strcmp(msg, "q\n") == 0) {
-			closesocket(mSocket);
+			closesocket(tSocket);
 			break;
 		}
 		int datasize = strlen(data) + 1;
-		send(mSocket, (char*)&datasize, sizeof(int), 0);
-		int send_size = send(mSocket, data, strlen(data), 0);
+		send(tSocket, (char*)&datasize, sizeof(int), 0);
+		int send_size = send(tSocket, data, strlen(data), 0);
 		free(data);
 		if (send_size == -1) {
 			server_close();

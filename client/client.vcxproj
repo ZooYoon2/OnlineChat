@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include\nlohmann;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,6 +145,7 @@
     <ClCompile Include="src\view.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\channel.h" />
     <ClInclude Include="include\SCH.h" />
     <ClInclude Include="include\TextChat.h" />
     <ClInclude Include="include\view.h" />

@@ -1,4 +1,5 @@
 #include "TextChat.h"
+#include "channel.h"
 
 user users[MAX_CLNT];
 int user_cnt = 0;
@@ -8,11 +9,11 @@ std::queue<int> vacancy_idx_q;
 int user_idx = 0;
 std::mutex vacancy_q_mtx;
 
-SOCKET mSocket;
+SOCKET tSocket;
 
 void TC_server_init() {
 	//주소체계, SOCK_STREAM 연결형, SOCK_DGRAM 비연결형
-	mSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	tSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	//mSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
 	SOCKADDR_IN serv_addr;
@@ -21,17 +22,17 @@ void TC_server_init() {
 	serv_addr.sin_port = htons(PORTNO);
 
 
-	if (mSocket == INVALID_SOCKET) {
+	if (tSocket == INVALID_SOCKET) {
 		printf("소켓 에러번호 : %d\n", WSAGetLastError());
 		WSACleanup();
 	}
 
-	if (bind(mSocket, (LPSOCKADDR)&serv_addr, sizeof(serv_addr)) == SOCKET_ERROR) {
+	if (bind(tSocket, (LPSOCKADDR)&serv_addr, sizeof(serv_addr)) == SOCKET_ERROR) {
 		printf("bind 에러번호 : %d\n", WSAGetLastError());
 		WSACleanup();
 	}
 
-	listen(mSocket, 5);
+	listen(tSocket, 5);
 }
 
 void TC_client_add() {
@@ -41,7 +42,7 @@ void TC_client_add() {
 		int client_addrSize = sizeof(client_addr);
 		int client_idx = 0;
 		SOCKET cSocket;
-		cSocket = accept(mSocket, (LPSOCKADDR)&client_addr, &client_addrSize);
+		cSocket = accept(tSocket, (LPSOCKADDR)&client_addr, &client_addrSize);
 		if (cSocket == INVALID_SOCKET) {
 			printf("접속 에러번호 : %d\n", WSAGetLastError());
 		}
@@ -62,7 +63,7 @@ void TC_client_add() {
 				else {
 					client_idx = user_idx++;
 				}
-				users[client_idx].s = cSocket;
+				users[client_idx].socket = cSocket;
 				printf("Connection established. New socket num is %d\n", cSocket);
 				user_cnt++;
 				vacancy_q_mtx.unlock();
@@ -85,8 +86,8 @@ void TC_recv_client(int idx) {
 	int RecvSize;
 	char* data;
 	while (1) {
-		if (recv(users[idx].s, (char*)&RecvSize, sizeof(int), 0) <= 0) {
-			printf("%d번째 클라이언트 Socket Num %d 종료\n", idx + 1, users[idx].s);
+		if (recv(users[idx].socket, (char*)&RecvSize, sizeof(int), 0) <= 0) {
+			printf("%d번째 클라이언트 Socket Num %d 종료\n", idx + 1, users[idx].socket);
 			vacancy_q_mtx.lock();
 			user_cnt -= 1;
 			vacancy_idx_q.push(idx);
@@ -96,8 +97,8 @@ void TC_recv_client(int idx) {
 		};
 		data = (char*)malloc(RecvSize + 1);
 		printf("%d번째 유저 데이터 - ", idx + 1);
-		if (recv(users[idx].s, data, RecvSize, 0) <= 0) {
-			printf("%d번째 클라이언트 Socket Num %d 종료\n", idx + 1, users[idx].s);
+		if (recv(users[idx].socket, data, RecvSize, 0) <= 0) {
+			printf("%d번째 클라이언트 Socket Num %d 종료\n", idx + 1, users[idx].socket);
 			vacancy_q_mtx.lock();
 			user_cnt -= 1;
 			vacancy_idx_q.push(idx);
