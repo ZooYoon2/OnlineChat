@@ -31,5 +31,5 @@ byte code; word Type; word PayloadSize;
 구조체며 각 소켓통신에 데이터 불필요를 줄이기 위한 직렬화와 역직렬화가 있고 때문에 서버와 클라이언트가 Protocol파일을 동일하게 사용
 
 ## 클래스 구조
-TCP_Server, UDP_Server - 기본 소켓 통신을 위한 윈속 설정 클래스
- * MainServer, GameServer, ChatServer -> virsual addClient (to Thread)
+부모 - TCP_Server, UDP_Server - 기본 소켓 통신을 위한 윈속 설정 클래스 | virsual addClient (to Thread), recv
+자식 - MainServer, GameServer, ChatServer | 요청에 행동 함수
