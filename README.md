@@ -1,7 +1,7 @@
 # OnlineChat
 소켓 초기 설계
 
-# 1차 구현 형태
+# 1차
 
 ## Lobby
 메인 서버 TCP
@@ -21,3 +21,15 @@
 - MFC 프레임 워크를 통한 GUI 구현
 - 메인 서버 - Login, Room 검색 및 생성, 게임서버 인도
 - 게임 서버 - 방 최초 생성 및 User 입장
+
+## 프로토콜
+헤더와 몸통으로 구분되며 헤더의 형태
+ProtocolHeader (struct)
+byte code; word Type; word PayloadSize;
+
+몸통(data)는 각 서버별 프로토콜에 따라 구현
+구조체며 각 소켓통신에 데이터 불필요를 줄이기 위한 직렬화와 역직렬화가 있고 때문에 서버와 클라이언트가 Protocol파일을 동일하게 사용
+
+## 클래스 구조
+TCP_Server, UDP_Server - 기본 소켓 통신을 위한 윈속 설정 클래스
+ * MainServer, GameServer, ChatServer -> virsual addClient (to Thread)
