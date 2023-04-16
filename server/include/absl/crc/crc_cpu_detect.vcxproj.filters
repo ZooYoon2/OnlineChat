@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\git\library\abseil\abseil-cpp\absl\crc\internal\cpu_detect.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\crc\internal\cpu_detect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\git\library\abseil\abseil-cpp\absl\crc\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5C40F0AD-F605-3F5D-87C5-B6EE402A13F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B2EF4844-F991-3228-9443-6A6BA3EC338C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

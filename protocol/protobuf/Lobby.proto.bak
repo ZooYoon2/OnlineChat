@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package Lobby;
+
+enum RoomType{
+    PUBLIC = 0;
+    PRIVATE = 1;
+}
+
+message RoomList{
+
+    message Room{
+        int32 id=1;
+        string name=2;
+        int32 cnt_user=3;
+        int32 max_user=4;
+        RoomType type=5;
+    }
+    
+    repeated Room rooms = 1;
+}
+
+message SelectRoom{
+    string name = 1;
+    int32 max_user = 2;
+    RoomType type = 3;
+}
+
+message CreateRoom{
+    string name = 1;
+    int32 max_user = 2;
+    RoomType type=3;
+    //string password=4;
+}
+
+message ConnectRoom{
+    int32 id=1;
+    //string password=2;
+}
+
+message UserList{
+    message User{
+        int32 id=1;
+        string name=2;
+    }
+    repeated User users = 1;
+}
+

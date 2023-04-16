@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\git\library\abseil\abseil-cpp\absl\random\internal\fast_uniform_bits_test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\git\library\abseil\abseil-cpp\absl\random\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B2EF4844-F991-3228-9443-6A6BA3EC338C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

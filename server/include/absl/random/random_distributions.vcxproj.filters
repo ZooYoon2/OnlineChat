@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\git\library\abseil\abseil-cpp\absl\random\discrete_distribution.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\library\abseil\abseil-cpp\absl\random\gaussian_distribution.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\bernoulli_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\beta_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\discrete_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\distributions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\exponential_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\gaussian_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\log_uniform_int_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\poisson_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\uniform_int_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\uniform_real_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\library\abseil\abseil-cpp\absl\random\zipf_distribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\git\library\abseil\abseil-cpp\absl\random\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5C40F0AD-F605-3F5D-87C5-B6EE402A13F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B2EF4844-F991-3228-9443-6A6BA3EC338C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

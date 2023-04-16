@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\git\library\abseil\abseil-cpp\CMakeFiles\5bf9b608ebeb5d9f04bdb5f60928f213\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C006CA3B-7217-3490-BEE1-E309A699444F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

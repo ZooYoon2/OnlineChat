@@ -1,7 +1,7 @@
 #include "TextChat.h"
-#include "channel.h"
 
-user users[MAX_CLNT];
+/*
+User users[MAX_CLNT];
 int user_cnt = 0;
 std::mutex users_mtx;
 
@@ -112,3 +112,4 @@ void TC_recv_client(int idx) {
 		free(data);
 	}
 }
+*/

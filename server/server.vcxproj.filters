@@ -21,7 +21,10 @@
     <ClCompile Include="src\TextChat.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="src\channel.cpp">
+    <ClCompile Include="src\Lobby.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,10 +32,31 @@
     <ClInclude Include="include\SCH.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="include\channel.h">
+    <ClInclude Include="include\Lobby.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="include\TextChat.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mainServer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameRoom.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\User.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameServer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ChatServer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tool.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

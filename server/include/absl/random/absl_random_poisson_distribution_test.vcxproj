@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1EE0CEB2-A04A-3508-8223-46766999D3C7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>absl_random_poisson_distribution_test</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\git\library\abseil\abseil-cpp\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">absl_random_poisson_distribution_test.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">absl_random_poisson_distribution_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\git\library\abseil\abseil-cpp\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">absl_random_poisson_distribution_test.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">absl_random_poisson_distribution_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\git\library\abseil\abseil-cpp\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">absl_random_poisson_distribution_test.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">absl_random_poisson_distribution_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\git\library\abseil\abseil-cpp\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">absl_random_poisson_distribution_test.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">absl_random_poisson_distribution_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googletest/include" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googlemock/include" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googlemock" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googletest" /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4068;4180;4244;4267;4503;4800;4018;4101;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;C:\git\library\abseil\abseil-cpp\googletest-src\googletest\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock;C:\git\library\abseil\abseil-cpp\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;C:\git\library\abseil\abseil-cpp\googletest-src\googletest\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock;C:\git\library\abseil\abseil-cpp\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Debug\absl_random_distributions.lib;Debug\absl_random_internal_distribution_test_util.lib;..\base\Debug\absl_raw_logging_internal.lib;..\strings\Debug\absl_strings.lib;..\..\lib\Debug\gmock.lib;..\..\lib\Debug\gtest_main.lib;-ignore:4221;Debug\absl_random_distributions.lib;Debug\absl_random_seed_sequences.lib;Debug\absl_random_internal_pool_urbg.lib;Debug\absl_random_internal_randen.lib;Debug\absl_random_internal_randen_hwaes.lib;Debug\absl_random_internal_randen_hwaes_impl.lib;Debug\absl_random_internal_randen_slow.lib;Debug\absl_random_internal_platform.lib;Debug\absl_random_internal_seed_material.lib;Debug\absl_random_seed_gen_exception.lib;..\strings\Debug\absl_cord.lib;..\strings\Debug\absl_cordz_info.lib;..\strings\Debug\absl_cord_internal.lib;..\strings\Debug\absl_cordz_functions.lib;..\strings\Debug\absl_cordz_handle.lib;..\crc\Debug\absl_crc_cord_state.lib;..\crc\Debug\absl_crc32c.lib;..\crc\Debug\absl_crc_internal.lib;..\crc\Debug\absl_crc_cpu_detect.lib;..\container\Debug\absl_raw_hash_set.lib;..\hash\Debug\absl_hash.lib;..\hash\Debug\absl_city.lib;..\types\Debug\absl_bad_variant_access.lib;..\hash\Debug\absl_low_level_hash.lib;..\types\Debug\absl_bad_optional_access.lib;..\container\Debug\absl_hashtablez_sampler.lib;..\profiling\Debug\absl_exponential_biased.lib;..\synchronization\Debug\absl_synchronization.lib;..\debugging\Debug\absl_stacktrace.lib;..\synchronization\Debug\absl_graphcycles_internal.lib;..\synchronization\Debug\absl_kernel_timeout_internal.lib;..\time\Debug\absl_time.lib;..\time\Debug\absl_civil_time.lib;..\time\Debug\absl_time_zone.lib;..\debugging\Debug\absl_symbolize.lib;..\debugging\Debug\absl_debugging_internal.lib;..\base\Debug\absl_malloc_internal.lib;..\debugging\Debug\absl_demangle_internal.lib;..\strings\Debug\absl_str_format_internal.lib;..\strings\Debug\absl_strings.lib;..\strings\Debug\absl_strings_internal.lib;..\base\Debug\absl_base.lib;..\base\Debug\absl_spinlock_wait.lib;..\numeric\Debug\absl_int128.lib;..\base\Debug\absl_throw_delegate.lib;..\base\Debug\absl_raw_logging_internal.lib;..\base\Debug\absl_log_severity.lib;-ignore:4221;..\..\lib\Debug\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/git/library/abseil/abseil-cpp/absl/random/Debug/absl_random_poisson_distribution_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/git/library/abseil/abseil-cpp/bin/Debug/absl_random_poisson_distribution_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googletest/include" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googlemock/include" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googlemock" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googletest" /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4005;4068;4180;4244;4267;4503;4800;4018;4101;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;C:\git\library\abseil\abseil-cpp\googletest-src\googletest\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock;C:\git\library\abseil\abseil-cpp\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;C:\git\library\abseil\abseil-cpp\googletest-src\googletest\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock;C:\git\library\abseil\abseil-cpp\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Release\absl_random_distributions.lib;Release\absl_random_internal_distribution_test_util.lib;..\base\Release\absl_raw_logging_internal.lib;..\strings\Release\absl_strings.lib;..\..\lib\Release\gmock.lib;..\..\lib\Release\gtest_main.lib;-ignore:4221;Release\absl_random_distributions.lib;Release\absl_random_seed_sequences.lib;Release\absl_random_internal_pool_urbg.lib;Release\absl_random_internal_randen.lib;Release\absl_random_internal_randen_hwaes.lib;Release\absl_random_internal_randen_hwaes_impl.lib;Release\absl_random_internal_randen_slow.lib;Release\absl_random_internal_platform.lib;Release\absl_random_internal_seed_material.lib;Release\absl_random_seed_gen_exception.lib;..\strings\Release\absl_cord.lib;..\strings\Release\absl_cordz_info.lib;..\strings\Release\absl_cord_internal.lib;..\strings\Release\absl_cordz_functions.lib;..\strings\Release\absl_cordz_handle.lib;..\crc\Release\absl_crc_cord_state.lib;..\crc\Release\absl_crc32c.lib;..\crc\Release\absl_crc_internal.lib;..\crc\Release\absl_crc_cpu_detect.lib;..\container\Release\absl_raw_hash_set.lib;..\hash\Release\absl_hash.lib;..\hash\Release\absl_city.lib;..\types\Release\absl_bad_variant_access.lib;..\hash\Release\absl_low_level_hash.lib;..\types\Release\absl_bad_optional_access.lib;..\container\Release\absl_hashtablez_sampler.lib;..\profiling\Release\absl_exponential_biased.lib;..\synchronization\Release\absl_synchronization.lib;..\debugging\Release\absl_stacktrace.lib;..\synchronization\Release\absl_graphcycles_internal.lib;..\synchronization\Release\absl_kernel_timeout_internal.lib;..\time\Release\absl_time.lib;..\time\Release\absl_civil_time.lib;..\time\Release\absl_time_zone.lib;..\debugging\Release\absl_symbolize.lib;..\debugging\Release\absl_debugging_internal.lib;..\base\Release\absl_malloc_internal.lib;..\debugging\Release\absl_demangle_internal.lib;..\strings\Release\absl_str_format_internal.lib;..\strings\Release\absl_strings.lib;..\strings\Release\absl_strings_internal.lib;..\base\Release\absl_base.lib;..\base\Release\absl_spinlock_wait.lib;..\numeric\Release\absl_int128.lib;..\base\Release\absl_throw_delegate.lib;..\base\Release\absl_raw_logging_internal.lib;..\base\Release\absl_log_severity.lib;-ignore:4221;..\..\lib\Release\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/git/library/abseil/abseil-cpp/absl/random/Release/absl_random_poisson_distribution_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/git/library/abseil/abseil-cpp/bin/Release/absl_random_poisson_distribution_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googletest/include" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googlemock/include" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googlemock" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googletest" /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4005;4068;4180;4244;4267;4503;4800;4018;4101;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;C:\git\library\abseil\abseil-cpp\googletest-src\googletest\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock;C:\git\library\abseil\abseil-cpp\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;C:\git\library\abseil\abseil-cpp\googletest-src\googletest\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock;C:\git\library\abseil\abseil-cpp\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>MinSizeRel\absl_random_distributions.lib;MinSizeRel\absl_random_internal_distribution_test_util.lib;..\base\MinSizeRel\absl_raw_logging_internal.lib;..\strings\MinSizeRel\absl_strings.lib;..\..\lib\MinSizeRel\gmock.lib;..\..\lib\MinSizeRel\gtest_main.lib;-ignore:4221;MinSizeRel\absl_random_distributions.lib;MinSizeRel\absl_random_seed_sequences.lib;MinSizeRel\absl_random_internal_pool_urbg.lib;MinSizeRel\absl_random_internal_randen.lib;MinSizeRel\absl_random_internal_randen_hwaes.lib;MinSizeRel\absl_random_internal_randen_hwaes_impl.lib;MinSizeRel\absl_random_internal_randen_slow.lib;MinSizeRel\absl_random_internal_platform.lib;MinSizeRel\absl_random_internal_seed_material.lib;MinSizeRel\absl_random_seed_gen_exception.lib;..\strings\MinSizeRel\absl_cord.lib;..\strings\MinSizeRel\absl_cordz_info.lib;..\strings\MinSizeRel\absl_cord_internal.lib;..\strings\MinSizeRel\absl_cordz_functions.lib;..\strings\MinSizeRel\absl_cordz_handle.lib;..\crc\MinSizeRel\absl_crc_cord_state.lib;..\crc\MinSizeRel\absl_crc32c.lib;..\crc\MinSizeRel\absl_crc_internal.lib;..\crc\MinSizeRel\absl_crc_cpu_detect.lib;..\container\MinSizeRel\absl_raw_hash_set.lib;..\hash\MinSizeRel\absl_hash.lib;..\hash\MinSizeRel\absl_city.lib;..\types\MinSizeRel\absl_bad_variant_access.lib;..\hash\MinSizeRel\absl_low_level_hash.lib;..\types\MinSizeRel\absl_bad_optional_access.lib;..\container\MinSizeRel\absl_hashtablez_sampler.lib;..\profiling\MinSizeRel\absl_exponential_biased.lib;..\synchronization\MinSizeRel\absl_synchronization.lib;..\debugging\MinSizeRel\absl_stacktrace.lib;..\synchronization\MinSizeRel\absl_graphcycles_internal.lib;..\synchronization\MinSizeRel\absl_kernel_timeout_internal.lib;..\time\MinSizeRel\absl_time.lib;..\time\MinSizeRel\absl_civil_time.lib;..\time\MinSizeRel\absl_time_zone.lib;..\debugging\MinSizeRel\absl_symbolize.lib;..\debugging\MinSizeRel\absl_debugging_internal.lib;..\base\MinSizeRel\absl_malloc_internal.lib;..\debugging\MinSizeRel\absl_demangle_internal.lib;..\strings\MinSizeRel\absl_str_format_internal.lib;..\strings\MinSizeRel\absl_strings.lib;..\strings\MinSizeRel\absl_strings_internal.lib;..\base\MinSizeRel\absl_base.lib;..\base\MinSizeRel\absl_spinlock_wait.lib;..\numeric\MinSizeRel\absl_int128.lib;..\base\MinSizeRel\absl_throw_delegate.lib;..\base\MinSizeRel\absl_raw_logging_internal.lib;..\base\MinSizeRel\absl_log_severity.lib;-ignore:4221;..\..\lib\MinSizeRel\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/git/library/abseil/abseil-cpp/absl/random/MinSizeRel/absl_random_poisson_distribution_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/git/library/abseil/abseil-cpp/bin/MinSizeRel/absl_random_poisson_distribution_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googletest/include" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googlemock/include" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googlemock" /external:I "C:/git/library/abseil/abseil-cpp/googletest-src/googletest" /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4068;4180;4244;4267;4503;4800;4018;4101;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;C:\git\library\abseil\abseil-cpp\googletest-src\googletest\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock;C:\git\library\abseil\abseil-cpp\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\git\library\abseil\abseil-cpp;C:\git\library\abseil\abseil-cpp\googletest-src\googletest\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock\include;C:\git\library\abseil\abseil-cpp\googletest-src\googlemock;C:\git\library\abseil\abseil-cpp\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>RelWithDebInfo\absl_random_distributions.lib;RelWithDebInfo\absl_random_internal_distribution_test_util.lib;..\base\RelWithDebInfo\absl_raw_logging_internal.lib;..\strings\RelWithDebInfo\absl_strings.lib;..\..\lib\RelWithDebInfo\gmock.lib;..\..\lib\RelWithDebInfo\gtest_main.lib;-ignore:4221;RelWithDebInfo\absl_random_distributions.lib;RelWithDebInfo\absl_random_seed_sequences.lib;RelWithDebInfo\absl_random_internal_pool_urbg.lib;RelWithDebInfo\absl_random_internal_randen.lib;RelWithDebInfo\absl_random_internal_randen_hwaes.lib;RelWithDebInfo\absl_random_internal_randen_hwaes_impl.lib;RelWithDebInfo\absl_random_internal_randen_slow.lib;RelWithDebInfo\absl_random_internal_platform.lib;RelWithDebInfo\absl_random_internal_seed_material.lib;RelWithDebInfo\absl_random_seed_gen_exception.lib;..\strings\RelWithDebInfo\absl_cord.lib;..\strings\RelWithDebInfo\absl_cordz_info.lib;..\strings\RelWithDebInfo\absl_cord_internal.lib;..\strings\RelWithDebInfo\absl_cordz_functions.lib;..\strings\RelWithDebInfo\absl_cordz_handle.lib;..\crc\RelWithDebInfo\absl_crc_cord_state.lib;..\crc\RelWithDebInfo\absl_crc32c.lib;..\crc\RelWithDebInfo\absl_crc_internal.lib;..\crc\RelWithDebInfo\absl_crc_cpu_detect.lib;..\container\RelWithDebInfo\absl_raw_hash_set.lib;..\hash\RelWithDebInfo\absl_hash.lib;..\hash\RelWithDebInfo\absl_city.lib;..\types\RelWithDebInfo\absl_bad_variant_access.lib;..\hash\RelWithDebInfo\absl_low_level_hash.lib;..\types\RelWithDebInfo\absl_bad_optional_access.lib;..\container\RelWithDebInfo\absl_hashtablez_sampler.lib;..\profiling\RelWithDebInfo\absl_exponential_biased.lib;..\synchronization\RelWithDebInfo\absl_synchronization.lib;..\debugging\RelWithDebInfo\absl_stacktrace.lib;..\synchronization\RelWithDebInfo\absl_graphcycles_internal.lib;..\synchronization\RelWithDebInfo\absl_kernel_timeout_internal.lib;..\time\RelWithDebInfo\absl_time.lib;..\time\RelWithDebInfo\absl_civil_time.lib;..\time\RelWithDebInfo\absl_time_zone.lib;..\debugging\RelWithDebInfo\absl_symbolize.lib;..\debugging\RelWithDebInfo\absl_debugging_internal.lib;..\base\RelWithDebInfo\absl_malloc_internal.lib;..\debugging\RelWithDebInfo\absl_demangle_internal.lib;..\strings\RelWithDebInfo\absl_str_format_internal.lib;..\strings\RelWithDebInfo\absl_strings.lib;..\strings\RelWithDebInfo\absl_strings_internal.lib;..\base\RelWithDebInfo\absl_base.lib;..\base\RelWithDebInfo\absl_spinlock_wait.lib;..\numeric\RelWithDebInfo\absl_int128.lib;..\base\RelWithDebInfo\absl_throw_delegate.lib;..\base\RelWithDebInfo\absl_raw_logging_internal.lib;..\base\RelWithDebInfo\absl_log_severity.lib;-ignore:4221;..\..\lib\RelWithDebInfo\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/git/library/abseil/abseil-cpp/absl/random/RelWithDebInfo/absl_random_poisson_distribution_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/git/library/abseil/abseil-cpp/bin/RelWithDebInfo/absl_random_poisson_distribution_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\git\library\abseil\abseil-cpp\absl\random\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/git/library/abseil/abseil-cpp/absl/random/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/git/library/abseil/abseil-cpp -BC:/git/library/abseil/abseil-cpp --check-stamp-file C:/git/library/abseil/abseil-cpp/absl/random/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\git\library\abseil\abseil-cpp\absl\random\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/git/library/abseil/abseil-cpp/absl/random/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/git/library/abseil/abseil-cpp -BC:/git/library/abseil/abseil-cpp --check-stamp-file C:/git/library/abseil/abseil-cpp/absl/random/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\git\library\abseil\abseil-cpp\absl\random\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/git/library/abseil/abseil-cpp/absl/random/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/git/library/abseil/abseil-cpp -BC:/git/library/abseil/abseil-cpp --check-stamp-file C:/git/library/abseil/abseil-cpp/absl/random/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\git\library\abseil\abseil-cpp\absl\random\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/git/library/abseil/abseil-cpp/absl/random/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/git/library/abseil/abseil-cpp -BC:/git/library/abseil/abseil-cpp --check-stamp-file C:/git/library/abseil/abseil-cpp/absl/random/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\git\library\abseil\abseil-cpp\absl\random\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\git\library\abseil\abseil-cpp\absl\random\poisson_distribution_test.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\ZERO_CHECK.vcxproj">
+      <Project>{A9EAB435-C940-3B1A-8F07-2DBC3E3506EF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\types\bad_optional_access.vcxproj">
+      <Project>{6D8DE48C-BE1B-39CA-9FC6-C1C21D687A3D}</Project>
+      <Name>bad_optional_access</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\types\bad_variant_access.vcxproj">
+      <Project>{7A9EF758-DA0B-34AA-A048-D7C97135CAA2}</Project>
+      <Name>bad_variant_access</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\base\base.vcxproj">
+      <Project>{4065C04E-DF6F-350E-AE07-199088A451ED}</Project>
+      <Name>base</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\hash\city.vcxproj">
+      <Project>{099A9ADB-654B-3388-A2A7-BFCCB85FA28E}</Project>
+      <Name>city</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\time\civil_time.vcxproj">
+      <Project>{47E80BD5-C4FC-3D2D-BA9C-87F2DE89D857}</Project>
+      <Name>civil_time</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\strings\cord.vcxproj">
+      <Project>{1A4BF76C-3642-3204-B033-229C5301B7B7}</Project>
+      <Name>cord</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\strings\cord_internal.vcxproj">
+      <Project>{93CC33B6-35BF-360A-8B1D-A348C98B17CD}</Project>
+      <Name>cord_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\strings\cordz_functions.vcxproj">
+      <Project>{676A792B-440B-3EF5-AF2D-B05D3686AA23}</Project>
+      <Name>cordz_functions</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\strings\cordz_handle.vcxproj">
+      <Project>{1A8D956B-AA72-321E-9EFE-86AEEAE7D21B}</Project>
+      <Name>cordz_handle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\strings\cordz_info.vcxproj">
+      <Project>{D11D5B50-75AB-3A1A-B0CC-3AC1E144C2FD}</Project>
+      <Name>cordz_info</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\crc\crc32c.vcxproj">
+      <Project>{8134FF09-853A-350E-8F8B-6FD0DB38BCC6}</Project>
+      <Name>crc32c</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\crc\crc_cord_state.vcxproj">
+      <Project>{0766CB78-5736-3062-844B-D7A386B90D69}</Project>
+      <Name>crc_cord_state</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\crc\crc_cpu_detect.vcxproj">
+      <Project>{B5E0D9A5-FA4B-35CC-B762-A54FD0180CF2}</Project>
+      <Name>crc_cpu_detect</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\crc\crc_internal.vcxproj">
+      <Project>{D07DA57C-074C-36A1-B18D-8954E54DDB2D}</Project>
+      <Name>crc_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\debugging\debugging_internal.vcxproj">
+      <Project>{2E67D163-1BA5-3306-A398-4B4BB73B3E4B}</Project>
+      <Name>debugging_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\debugging\demangle_internal.vcxproj">
+      <Project>{9B109C04-8C38-3094-80BA-82466BD94B23}</Project>
+      <Name>demangle_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\profiling\exponential_biased.vcxproj">
+      <Project>{A135D042-1435-32CF-AF68-6A2AAC1CCB80}</Project>
+      <Name>exponential_biased</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\googletest-build\googlemock\gmock.vcxproj">
+      <Project>{57C94B2D-C832-3659-802A-5DFE37963860}</Project>
+      <Name>gmock</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\synchronization\graphcycles_internal.vcxproj">
+      <Project>{69FBEF83-D763-3FF2-8809-0CA2A05CC6BC}</Project>
+      <Name>graphcycles_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\googletest-build\googletest\gtest.vcxproj">
+      <Project>{8B26A05D-BAF8-3CDC-8B1F-1E4215929F2F}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\googletest-build\googletest\gtest_main.vcxproj">
+      <Project>{B0EAF0D7-FAEF-353B-ABB4-0117F481593F}</Project>
+      <Name>gtest_main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\hash\hash.vcxproj">
+      <Project>{BF099D02-FD79-33BD-8CF0-FB79D905416D}</Project>
+      <Name>hash</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\container\hashtablez_sampler.vcxproj">
+      <Project>{35FA6092-FD69-31E4-A332-6028C86A5DDC}</Project>
+      <Name>hashtablez_sampler</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\numeric\int128.vcxproj">
+      <Project>{A46AA7F4-0EDE-3BD9-99A0-438D248B4F7F}</Project>
+      <Name>int128</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\synchronization\kernel_timeout_internal.vcxproj">
+      <Project>{0BA3F12B-ED2C-3C2F-8C0B-78B163F8FDB6}</Project>
+      <Name>kernel_timeout_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\base\log_severity.vcxproj">
+      <Project>{77B42018-0A9A-3059-B8B4-E1F2C3C17B3E}</Project>
+      <Name>log_severity</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\hash\low_level_hash.vcxproj">
+      <Project>{76E97D19-C454-3F30-A24A-F108FB0E99BB}</Project>
+      <Name>low_level_hash</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\base\malloc_internal.vcxproj">
+      <Project>{66B1B7D4-AAFC-3B19-80BC-F63CC145676B}</Project>
+      <Name>malloc_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_distributions.vcxproj">
+      <Project>{8F5FBD54-7E31-36C1-8111-141A5A5C3386}</Project>
+      <Name>random_distributions</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_internal_distribution_test_util.vcxproj">
+      <Project>{B23E0A71-3F14-3F47-BCC6-7E09F1197B05}</Project>
+      <Name>random_internal_distribution_test_util</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_internal_platform.vcxproj">
+      <Project>{16C05422-9BD4-3307-A08A-1DEC33219EF6}</Project>
+      <Name>random_internal_platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_internal_pool_urbg.vcxproj">
+      <Project>{4FB703B8-FD06-380C-B18B-C97C24F1C8AD}</Project>
+      <Name>random_internal_pool_urbg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_internal_randen.vcxproj">
+      <Project>{DDF82963-0327-3603-B95E-02377705BA8A}</Project>
+      <Name>random_internal_randen</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_internal_randen_hwaes.vcxproj">
+      <Project>{DD82B448-1824-3829-9212-4954AF3AD53D}</Project>
+      <Name>random_internal_randen_hwaes</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_internal_randen_hwaes_impl.vcxproj">
+      <Project>{89EFE4A5-31AA-35F4-9DEB-6EEF8BC6B9DA}</Project>
+      <Name>random_internal_randen_hwaes_impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_internal_randen_slow.vcxproj">
+      <Project>{14237183-DB56-3ED9-8654-83C29C8F0D98}</Project>
+      <Name>random_internal_randen_slow</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_internal_seed_material.vcxproj">
+      <Project>{BE8B1D47-4D4D-30FE-B9A8-C5A2730C3948}</Project>
+      <Name>random_internal_seed_material</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_seed_gen_exception.vcxproj">
+      <Project>{D788DBB1-6ED7-3E6D-AF4E-28A7BE4A0BD5}</Project>
+      <Name>random_seed_gen_exception</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\random\random_seed_sequences.vcxproj">
+      <Project>{8719524A-5D84-3F93-BD48-F252283161EF}</Project>
+      <Name>random_seed_sequences</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\container\raw_hash_set.vcxproj">
+      <Project>{33B64DE5-F716-3F5A-97E5-E99C39977039}</Project>
+      <Name>raw_hash_set</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\base\raw_logging_internal.vcxproj">
+      <Project>{8F2E55F4-A09B-3CA5-914B-EDDFF760197D}</Project>
+      <Name>raw_logging_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\base\spinlock_wait.vcxproj">
+      <Project>{24BF1FB2-0F39-3C2F-9B3E-FDA7F23B8F75}</Project>
+      <Name>spinlock_wait</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\debugging\stacktrace.vcxproj">
+      <Project>{C0086260-2AE8-341E-934D-A2BC0DD66B9A}</Project>
+      <Name>stacktrace</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\strings\str_format_internal.vcxproj">
+      <Project>{3230BB9E-CAC4-38F6-9104-FFA5C41FBE05}</Project>
+      <Name>str_format_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\strings\strings.vcxproj">
+      <Project>{86EED910-A4AA-3DE0-9DB1-E9C2BC123B0F}</Project>
+      <Name>strings</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\strings\strings_internal.vcxproj">
+      <Project>{339C93ED-5AD9-31F9-AE06-124F84314583}</Project>
+      <Name>strings_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\debugging\symbolize.vcxproj">
+      <Project>{33016378-4D44-3B29-A5B3-55C50C5DBAC2}</Project>
+      <Name>symbolize</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\synchronization\synchronization.vcxproj">
+      <Project>{233F3BEB-CF6B-3CB6-A36D-2BD12598C59D}</Project>
+      <Name>synchronization</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\base\throw_delegate.vcxproj">
+      <Project>{65495B6D-5E71-3608-B674-BA23A2F5553F}</Project>
+      <Name>throw_delegate</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\time\time.vcxproj">
+      <Project>{847AE5A9-FB03-3EF5-AFC4-2E3BAEB6CEF4}</Project>
+      <Name>time</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\git\library\abseil\abseil-cpp\absl\time\time_zone.vcxproj">
+      <Project>{99774CEC-0DF6-39C7-B97D-1DC41FBC2E32}</Project>
+      <Name>time_zone</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

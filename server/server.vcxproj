@@ -72,9 +72,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>include;include\nlohmann;include\protobuf;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\git\library\vcpkg\vcpkg\installed\x64-windows\debug\lib;C:\git\library\vcpkg\vcpkg\installed\x64-windows\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>include\protobuf;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\git\library\vcpkg\vcpkg\installed\x64-windows\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -88,13 +92,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;include\nlohmann</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;include\nlohmann;..\protocol;include\protobuf</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;libprotobufd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -106,12 +110,14 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>include;include\nlohmann;..\protocol;include\protobuf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;libprotobuf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -143,14 +149,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\channel.cpp" />
+    <ClCompile Include="src\Lobby.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\server.cpp" />
     <ClCompile Include="src\TextChat.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\channel.h" />
+    <ClInclude Include="include\ChatServer.h" />
+    <ClInclude Include="include\GameRoom.h" />
+    <ClInclude Include="include\GameServer.h" />
+    <ClInclude Include="include\Lobby.h" />
+    <ClInclude Include="include\mainServer.h" />
     <ClInclude Include="include\SCH.h" />
+    <ClInclude Include="include\server.h" />
     <ClInclude Include="include\TextChat.h" />
+    <ClInclude Include="include\tool.h" />
+    <ClInclude Include="include\User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
